@@ -14,7 +14,11 @@ public class Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (CrossPlatformInputManager.GetButton ("Fire3")) {
+
+        Debug.Log("H:" +CrossPlatformInputManager.GetAxis("Horizontal"));
+        Debug.Log("V:" + CrossPlatformInputManager.GetAxis("Vertical"));
+
+        if (CrossPlatformInputManager.GetButton ("Fire3")) {
 			tryingToGrab = true;
 		} else {
 			tryingToGrab = false;
